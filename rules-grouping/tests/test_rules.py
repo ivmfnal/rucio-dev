@@ -28,7 +28,11 @@ from rucio.db.sqla.constants import DIDType
 from rucio.db.sqla.models import UpdatedDID
 from rucio.db.sqla.session import transactional_session
 from rucio.tests.common_server import get_vo
-from rucio.tests.test_rule import create_files, tag_generator
+from rucio.tests.test_rule import create_files
+
+from common import generator, create_files
+
+tag_generator = generator
 
 class TestJudgeEvaluator(object):
 
