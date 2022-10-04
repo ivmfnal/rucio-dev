@@ -38,12 +38,6 @@ class TestJudgeEvaluator(object):
         else:
             self.vo = {}
 
-        @transactional_session
-        def __cleanup_updated_dids(session=None):
-            session.query(UpdatedDID).delete()
-
-        __cleanup_updated_dids()
-
         # Add test RSE
         self.rse1 = 'MOCK'
         self.rse3 = 'MOCK3'
